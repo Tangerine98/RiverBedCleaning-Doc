@@ -270,4 +270,6 @@ body {
     height: 100%;
 }
 
-
+table {
+  text-align: center
+}

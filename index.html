@@ -10,7 +10,7 @@
 
     <script type="text/javascript" src="assets/jquery.js"></script>
     <script type="text/javascript" src="assets/bootstrap.js"></script>
-    <title>River Bed Cleaning</title>
+    <title>River Bed Cleaner</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/bootstrap.css" rel="stylesheet">
@@ -159,7 +159,9 @@ img.emoji {
 
 
 
-   <h1><font color="#84C21B">Underwater Drone</font></h1><br>
+   <h1><font color="#84C21B">River Bed Cleaner</font></h1><br>
+
+   <p>I suggest you change your abstract to suit that of a river bed cleaner and not just of an underwater drone.</p>
 
    <p>Underwater drone are remote control underwater robots that driven by an individ-
 ual on the surface. These robots are tethered by a series of wires. All Underwater
@@ -173,71 +175,9 @@ divers could not reach. It can be also used in rescue operations. That is if a p
 falls down in a reservoir we can use this device in the entire area to find out the
 person.</p>
  <br><h2><font color="#84C21B">Work to be done</font></h2><br>
-<p>Currently we have implemented an underwater drone. What is left to be done is including robotic arm which can then be used in river bed cleaning by picking and placing items. If time permits, sensors like gyroscope, depth sensors can also be used for the same.</p>
+<p>Currently we have implemented an underwater drone. What is left to be done is including a robotic arm which can then be used in river bed cleaning by picking and placing items. If time permits, sensors like gyroscope, depth sensors can also be used for the same.</p>
 
-<!--
- <p class="pic"><img src="assets/322.jpg" style="width:30%">
-  <legend>The whiteboard monitoring our progress!!</legend>
-  </p><div class="container">
-  <table style="width:100%" border="1">
-      <tbody><tr>
-          <td><b>Process</b></td>
-          <td><b>Tanvir</b></td>
-          <td><b>Suhail</b></td>
-
-      </tr>
-
-        <tr>
-            <td>3D Design</td>
-            <td>YES</td>
-            <td>YES</td>
-            </tr>
-          <tr><td>3D Printing</td>
-          <td>YES</td>
-          <td>YES</td>
-                </tr>
-      <tr>
-          <td>Electronics Productions</td>
-          <td>YES</td>
-          <td>YES</td>
-        </tr>
-      <tr>
-          <td>Embedded Programming</td>
-          <td>YES</td>
-          <td>YES</td>
-          </tr>
-          <tr>
-              <td>CNC Cutting</td>
-              <td>YES</td>
-              <td>YES</td>
-              </tr>
-              <tr>
-                  <td>Laser Cutting</td>
-                  <td>YES</td>
-                  <td>YES</td>
-                  </tr>
-        </tbody></table>
-          </div>
-
-  <br><p>With regards to the 3D design and 3D printing exercises, I 
-would be doing the design and printing of the laser holder, primary 
-mirror holder, the clamp for the optica tube, and guide rings for the 
-the aluminium rods.</p>
-  <br><p>In the electronics production department, I would design, mill 
-and stuff a PCB which would be used for motor control, LCD display, and 
-homing switch.</p>
-  <br><p>In the programming field, I would be involved in developing the
- code for finding the celestial body, given its Right Ascension and 
-Declination,and also developing the code for tracking it throught the 
-night.</p>
-  <br><p>I would be also be designing and cutting the base of the 
-telescope in Shopbot, by calculating the position for mounting the 
-motors.</p>
-  <br><p>The gear design and laser cutting would also be done by me.</p>
-
-  -->
-
-<br><h2><font color="#84C21B">Design</font></h2><br>
+<br><h2><font color="#84C21B">Design</font></h2>
 
 <br><h3><font color="#84C21B">ROV Structure</font></h3><br>
 <p>The structure dives through the water using its frame and propulsion system.
@@ -394,447 +334,247 @@ for vertical movement (y axis) and for horizontal movement (x axis). In our proj
 we use two joysticks. one for vertical movement along z plane and another one for
 x and y axis movement in horizontal plane. </p>
 
+<br><h2><font color="#84C21B">Implementation</font></h2><br>
+<p>The construction of the underwater drone was done in the following six phases:-
 
+<br><h3><font color="#84C21B">Phase I</font></h3><br>
+<p>Initially we started by building the frame. We used pvc pipes for initial structure
+building, as pvc was easy to cut and fix by ourselves it was used for all the trial
+build of frame. We had built many frame structures and after their trials in water
+we modified the structure as required.</p>
+<p>Then we came to realize that the PVC we used wasn’t strong enough. It was not
+able to withstand the weight of our motor, float or even the lead weights. Thus
+we started looking for a better frame material. Unplasticized Polyvinyl Chloride
+(uPVC) was chosen then as it was having a high strength to weight ratio. uPVC
+pipes were having less plasticity hence was less flexible giving us high strength.
+uPVC also has many advantages like good impact resistance, high strength, doesnt
+corrode, has all weather UV resistance etc..</p>
+<p class="pic"><img src="assets/img/final_frame.png" style="width:70%">
+<legend>Final Frame</legend></p>
+<p>The frame we build should also must be symmetric. The reason it should be
+symmetric is that it will greatly effect the stability of the system when other com-
+ponents like floats, weights, pumps are attached to the frame. Thus a symmetric
+structure was designed with a length and breadth of 30 cm. Height was fixed to
+20 cm.Pipes were provided with holes to avoid air trapping inside the pipes which
+will greatly affect the neutral buoyancy of the system when it is submerged hence
+stability will be lost. A single air bubble trapped inside could spoil the entire
+stability of the system. Joining of the uPVC pipes were done using nuts and bolts
+of 1/2 inch size as it will help us to repair the frame when needed.</p>
 
+<br><h3><font color="#84C21B">Phase II</font></h3><br>
+<p class="pic"><img src="assets/img/weights.png" style="width:50%">
+<legend>Weights</legend></p>
+<p>After the frame was build, next the floats and weights were placed. The proce-
+dure followed was as follows: Initially the floats where fixed above the frame using
+clamps. Here we used two floats at two ends of the structure at equal distance.
+Secondly, we added the motors to four pillars of the frame and fixed the vertical
+thruster, next we placed the frame in water, now the structure which was slightly
+floating was provided with lead weights until neutral buoyancy was achieved, the
+corresponding lead weights where then fixed on the frame. The principle of keep-
+ing positive buoyant materials on upper half of the structure and negative buoyant
+on the lower half is followed as it will help the system not to flip under the water
+under certain circumstances. The final structure was then immersed in the water
+and forces were given along different directions to check whether the system is
+stable or not.</p>
+<p>The principle of keeping positive buoyant materials on upper half of the struc-
+ture and negative buoyant on the lower half is followed as it will help the system
+not to flip under the water under certain circumstances.The final structure was
+then immersed in the water and forces were given along different directions to
+check whether the system is stable or not.</p>
 
+<br><h3><font color="#84C21B">Phase III</font></h3><br>
+<p>Here the building of propulsion motors from bilge pump is explained. The motor
+shaft is made to expose out of the frame by removing the ABS covering of the
+pump. Next the impeller is removed for fixing the custom made propeller.</p>
+<p>Propeller is made by 3D printing. Different designs were used and tested. We
+used Fusion360, a software for designing.</p>
+<p class="pic"><img src="assets/img/try_buoyancy.png" style="width:70%">
+<legend>Trial to determine neutral buoyancy</legend></p>
 
+<br><h3><font color="#84C21B">Phase IV</font></h3><br>
+<p>The next phase we came across was the arrangement of the propulsion system. We
+used four motors for horizontal movement along x-axis and y-axis, and a single
+motor for vertical movement. The arrangement of four horizontal thrusters make
+sure that equal weight is distributed along all corners of the frame and the vertical
+thruster must be placed at the centre of the horizontal plane at the point where the
+diagonals intersect. The vertical thruster is placed in such a height that propeller
+alone stands above floats. The horizontal propellers where then placed along each
+corners as shown as in the figure. Anticlockwise and clockwise direction of each
+motors with different sequence is performed to achieve foreword, backward, left,
+and right directions of motion. The forward motion of the system is achieved by
+rotating all horizontal motors on similar direction. The movement to the right
+is achieved by paired rotation of diagonally opposite thrusters along zero-th and
+third sub planes.</p>
 
-
-
-
-
-
-<!--
-
-  </p><p>The above piece would be placed right below the mirror with the
- nuts being inserted in the holes on the top staying flush with the 
-surface.</p>
-  <p class="pic"><img src="assets/pm1.gif" style="width:50%">
-    <legend>3D printing the part</legend>
-    </p><p>The above piece would be flanked by mirror clips on its 3 
-ends to prevent the mirror from falling over, an adjustable slot is 
-given to tighten the clip as required.</p>
-    <p class="pic"><img src="assets/325.jpg" style="width:80%">
-      </p><p>This set would be mounted over another circular frame which would be attached to the Optical tube.</p>
-      <p class="pic"><img src="assets/324.jpg" style="width:80%">
-        </p><p class="pic"><img src="assets/pm2.gif" style="width:50%">
-  </p><p>Once assembled the primary mount assembly would like this:</p>
-  <p class="pic"><img src="assets/326.jpg" style="width:80%">
-      </p><p class="pic"><img src="assets/343.jpg" style="width:80%">
-        <legend>The nuts in the bottom could be tightened and loosened to adjust the angle of the Primary Mirror</legend>
-    <br></p><h3><font color="#84C21B">Guide Rings</font></h3><br>
-    <p>Aluminium rods are used in between two pices of PVC tubes, so 
-that the assembly can be collapsible when not in use. So a set of guide 
-rings had to be designed for the rods to move. </p>
-    <p>The rings were designed so that three rings at an angle of 120 degrees to each other.</p>
-      <p class="pic"><img src="assets/328.jpg" style="width:80%">
-       <br></p><h3><font color="#84C21B">Laser Holder</font></h3><br>
-       <p>To use as a line pointer, a laser would be clamped onto the 
-Optical tube Assembly(OTA), this too has been designed and 3D Printed.</p>
-         <p class="pic"><img src="assets/327.jpg" style="width:80%">
-  <br></p><h3><font color="#84C21B">Optical Tube Clamps</font></h3><br>
-  <p>The whole assembly of the tube, mounts,mirrors, and focuser needs 
-to be rotated along the altitude, for this a clamp had to be designed 
-that fits over the tubeand runs through a bearing between the two side 
-arms.</p>
-<p>The part was designed in Onshape, and printed in Dimension 1200 es.</p>
-<p class="pic"><img src="assets/329.jpg" style="width:80%">
-</p><p class="pic"><img src="assets/clamp.gif" style="width:50%">
-  <br>
-  </p><p class="pic"><img src="assets/342.jpg" style="width:80%">
-    <legend>All of the 3D printed parts.</legend>
-      <br></p><h3><font color="#84C21B">LCD Holder</font></h3><br>
-      <p>The LCD has to be mounted on the base at an angle comfortable 
-for viewing from the top. This factor along with the constraint of 
-hieght of the box enclosure housing the PCB, led me to separate the LCD 
-from the box enclosure and display it elsewhere.For this I designed a 
-LCD mount in OnShape.</p>
-<p class="pic"><img src="assets/369.jpg" style="width:80%">
-  </p><p class="pic"><img src="assets/lcd.gif" style="width:50%">
-      <br></p><h3><font color="#84C21B">Rod Clip</font></h3><br>
-      <p>The Optical Tube Assembly (OTA), is built to be a collapsible ,
- so that it can be easily carried around.For this, when completely 
-opened up, there needs to be a rod clips to keep the secondary part of 
-the OTA in place, for this I designed a clip,that would latch on to the 
-guide ring.</p>
-      <p class="pic"><img src="assets/370.jpg" style="width:80%">
-        </p><p class="pic"><img src="assets/clip.gif" style="width:35%">
-<br></p><h2><font color="#84C21B">2D Design and CNC Cutting</font></h2><br>
-<p>The base upon which the whole telescope assembly would rest would be designed and CNC by me. </p>
-<p>The crucial design part here is to find out where to place the 
-depressions for the motors.As a closed loop belt drive system is used to
- drive the base, it is essential to know the distance of the motor 
-spindle from the centre of the base upon which a reduction gear would be
- mounted.</p>
-<p>To find this out I used a formulae , that I used back in school.</p>
-<p class="pic"><img src="assets/330.jpg" style="width:40%">
-</p><p>This gave me the distance between the two centres , when using a 400mm closed loop GT2 belt</p>
-<p>I then drew a 2D DXF, in Onshape to have it CNC cut.</p>
-<p class="pic"><img src="assets/331.jpg" style="width:80%">
-</p><p>The motors were given a 15 mm pit were they would be inserted.The base was cut in 18mm plywood.</p>
-<p class="pic"><img src="assets/sb.gif" style="width:50%">
-</p><p>The base that has been designed and cut above, would be resting 
-on another set of stationary base, rolling over a set of castor wheels.</p>
- <p class="pic"><img src="assets/332.jpg" style="width:80%">
-  <br></p><h2><font color="#84C21B">Laser Cutting</font></h2><br>
-  <p>The drive system in the telescope is a belt system.For this I 
-designed reduction gears so that the overall movement would be smoother 
-and much finer resolution can be achieved.Moreover, the torque required 
-would also decrease.</p>
-  <p>The pulley I had for the GT2 timing belts had a 20 tooth, 12.7 pitch diameter. A simple method to make gears is on <a href="http://archive.fabacademy.org/www.geargenerator.com">GearGenerator.com</a> </p>
-<p class="pic"><img src="assets/333.jpg" style="width:50%">
-  <legend>The gear that is mounted on the altitude axis</legend>
-  </p><p>The gear has been designed so that it can be fixed onto the 
-clamp designed, and would transfer the moment,inturn to turn the OTA.</p>
-  <p>Next, the gear for the azimuth axis (base rotation), was designed 
-in similarly, but the gerar ratio was kept to 1:5, i.e 100 teeth.</p>
-  <p class="pic"><img src="assets/356.jpg" style="width:70%">
-    <legend>Azimuth(Base)Gear</legend>
-      </p><p class="pic"><img src="assets/362.jpg" style="width:35%">
-  </p><p class="pic"><img src="assets/laser.gif" style="width:50%">
-
-  -->
-  <!--
-  <br></p><h2><font color="#84C21B">Electronics Production</font></h2><br>
-  <p>I was involved in the producing a PCB which would house the motor 
-drivers, LCD Display and the trigger switches for homing. This board 
-would communicate with the Main board being produced by Suhail, from 
-which it would recieve instructions on the text to display, and the 
-number of steps to turn and the direction.The information regarding 
-whether the north has been aligned (homing switch triggered), would be 
-passsed on from my board onto the main board, where the calculation part
- happens. </p>
-  <p>I used the board that I had made in networking week , keeping this in mind</p>
-    <p class="pic"><img src="assets/334.jpg" style="width:80%">
-    </p><p class="pic"><img src="assets/353.jpg" style="width:80%">
-    </p><p>For more information on how I made, and the lessons learnt while making the board ,please refer to my <a href="http://archive.fabacademy.org/archives/2017/fablabkochi/students/314/exercise16.html"> Networking Week</a>. </p>
-
-<br><h2><font color="#84C21B">Programming</font></h2><br>
-
-<p>The software of the telescope has mainly two parts.First is the 
-calculation and logic behind finding the object and tracking it, and 
-Secondly the communication part between the app and the two boards.</p>
-<p>For the programming part , I would be involved in doing the 
-calaculation and logic part of the software.Because,astronomy was quite a
- new topic for me ,it took some days in understanding the logic behind 
-tracking an object and get a sense of the differential equations used. </p>
-<p>The "Finding", part was done before by myself during the machine 
-design week, which was a set of formulas,changed into code.The major 
-difference in the GO-TO system, from our group project phase, is the 
-implementation of a repository of celestial objects in the the 
-app.Previously, all the coordinates of our location, the celestial 
-body's location , the date and time, was hardcoded into the 
-program.However, in this project, these data would b fetced real time, 
-from the app.  </p>
-<p>The basic fundamentals of astronomy used for this project is explained in the machine week.</p>
-<p>The input recieved by the program would be:</p>
-<ul>
-  <li>Right Ascension(Celestial Body)[RA]</li>
-  <li>Declination(Celestial Body)[DEC]</li>
-  <li>Current Date</li>
-  <li>Current Time</li>
-  <li>Current GPS location[LAT,LON]</li>
-</ul>
-<p>THe small catch over here is that , the program assumes the mobile on
- which the app is running to be near the telescope, which it would be if
- not the bluetooth wouldnt work.</p>
-<p>Given the inputs required, there are certain steps to get the Hour 
-Angle, which would later be used to find the altitude and azimuth 
-angles. </p>
-<p>The final formula to be used is :</p>
-  <p class="pic"><img src="assets/336.jpg" style="width:80%">
-    </p><pre>//to find Hour Angle (HA)
-  //HA = LST - RA
-  float get_ha() {
-    float lst_ = get_lst_value(ip_long, ip_t, ip_date);
-    float ra_ = ra_to_degree(ip_ra);
-    float ha = lst_ - ra_;
-    //float ha = (lst_ - ra_ + 360)- ((int)((lst_ - ra_ + 360)/360))*360;
-    return ha;
-    }
-
-//to calculate Altitude(ALT)
- float get_altitude() {
-   float alt = asin(sin(dec_to_degree(ip_dec)*pi/180)*sin(ip_lat*pi/180)+cos(dec_to_degree(ip_dec)*pi/180)*cos(ip_lat*pi/180)*cos(get_ha()*pi/180));
-   return alt*180/pi;
-  }
-
-//to calculate Azimuth(AZ)
-float get_azimuth() {
-  float a,az,ha;
-  a = acos((sin(dec_to_degree(ip_dec)*pi/180)-sin(get_altitude()*pi/180)*sin(ip_lat*pi/180))/(cos(get_altitude()*pi/180)*cos(ip_lat*pi/180)));
-  a = a*180/pi;
-  ha = get_ha();
-  if (sin(ha*pi/180) &gt; 0) {
-      az = 360-a;
-    }
-    else {
-       az = a;
-      }
-
-  return az;
-  }
-</pre>
-    <p>This would give the location of the celestial body,however, now to track the object throught the night is the challenge.</p>
-    <p>We would be using a Dobsonian mount for our telescope, which 
-would mean our OTA ,isnt aligned to our equator.Hence for tracking an 
-object both the motors would have to work, unlike equatorial mounts, 
-which would only require movement along one axis.</p>
-    <p>The velocities of the altitude and azimuth coordinates while tracking the object would be:</p>
-    <p class="pic"><img src="assets/339.jpg" style="width:50%">
-</p><p>Where:</p>
-<ul>
-  <li>Z: Zenith Distance</li>
-  <li>A: Azimuth Angle</li>
-  <li>phi: Latitude[LAT]</li>
-  </ul>
-  <p>The corresponding accelaration of the alt-az coordinates are:</p>
-    <p class="pic"><img src="assets/340.jpg" style="width:50%">
-      </p><p>From the above accelaration equation is evident that the 
-sign changes at the transit ,and the accelaration would near infinity at
- the zenith point.</p>
-      <p>Hence, this reveals a major drawback in using a Dobsonian mount
- for tracking,i.e, When the object moves past the zenith, there is small
- inaccessible blind spot around the zenith point, as the azimuth angle 
-changes the sign.Here the accelartion would tend to infinity.</p>
-      <p>The angles from around 89.5 degrees to 90.5 is generally considered to be the blind spot.</p>
-      <br>
-      <p>To reduce the complication,in doing double differentiation, I 
-decided to use a less effecient way of calculating the real time values 
-by running the G0-TO function in a loop with a delay of 2 minutes.This 
-however, would result in not a smooth tracking, but rather a choppier 
-one, but in a scale of 12 hours tracking , the frame captured reduction 
-would not be noticed .</p>
-<p>In my method, once the track option is enabled in the request 
-forwareded from the app, the program enters into a loop, wherein it 
-would recalculate the position of the object every 2 minutes, convert it
- into steps.Then, find the difference of the current number of steps 
-with the previous amount and then move the difference.The newly 
-calculated step count would then be stored as the default value.This 
-process goes on in repetitive cycle, until the object is out of sight of
- horizon, or until stopped.</p>
-<pre>alt_val = alt_val - al_delta;
-      azimuth_val = azimuth_val - az_delta;
-</pre>
-<p>The above line of code finds the difference between the current value of steps and the newly calculated ones</p>
-<pre>al_delta = al_delta + alt_val;
-       az_delta = az_delta + azimuth_val;</pre>
-       <p>The above line of code stores the newly calculated value as the default value, this value would serve in the next iteration.</p>
-<pre> if (ip_t[1]&lt;59) {
-        ip_t[1] = ip_t[1] + 1;
-      } else {
-        ip_t[1] = 0;
-        if (ip_t[0]&lt;23) {
-          ip_t[0] = ip_t[0] + 1;
-        } else {
-            ip_t[0] = 0;
-            if (ip_date[0]&lt;30) {
-                ip_date[0] = ip_date[0] + 1;
-              }else {
-                 ip_date[0] = 1;
-                 ip_date[1] = ip_date[1] +1;
-               }
-              </pre>
-
-
-<p>The above line of code , takes into account the change in time when 
-clock passes through one hour  or one day.For eg. when the time is 
-20:59, then next iteration has to be 21:00</p>
-<p>For the time being , it has been limited to 30 days in a month, I 
-would later refine the code so that it takes it the alternating 30 
-&amp;31 days, and would account for leap years and such.</p>
-<br><h2><font color="#84C21B">Assembling</font></h2><br>
-<p>To get started , I began with the base of the telescope. A 25 mm rod 
-was fixed onto the stationary base, using Araldite, a hardner</p>
-  <p class="pic"><img src="assets/344.jpg" style="width:35%">
-    </p><p>The homing switch , which is used to trigger, when the telescope is aligned to the zenith and the north had to be assembled.</p>
-    <p>For this, a mechanical switch with a wheel on the contact surface
- is used , so that it permits 360 degree rotation, without the 
-limitation of a regular switch that would sacrifice some degrees of 
-rotation, for its placement.</p>
-    <p>A smooth sliding contour has been laser cut , that would go over the wheel of the switch</p>
-    <p class="pic"><img src="assets/345.jpg" style="width:35%">
-      </p><p>The next task is to tension the belt drives, for the lower 
-base the design in itself would take care of the tensioning, however, 
-the belt drive of the altitude angle, haas to be done manually, because 
-it is an open loop belt</p>
-     <p class="pic"><img src="assets/346.jpg" style="width:35%">
-      </p><p>The belt used for driving the altitude axis is an open one,
- hence a joiner had to be made .The belt joiner is a laser cut negative 
-profile of the GT2 belt.To adjust the tension further I downloaded a 
-belt tensioner model from <a href="https://www.thingiverse.com/thing:1780636"> here.</a>The belt can be tightened by screwing in on the belt.</p>
-        <p class="pic"><img src="assets/359.jpg" style="width:35%">
-          </p><p>To make the Optical Tube Assembly (OTA),THE 1 meter 
-long PVC tube had to be cut into two sections of approx 60cm and another
- of 15 cm, based on the 120cm focal length of the mirrors used.</p>
-          <p class="pic"><img src="assets/365.jpg" style="width:75%">
-            </p><p>To give an aesthetic look to the project ,the wooden 
-parts as well as the PVC tube has been painted.However, as the PVC tube 
-was very smooth, I was apprenhensive about the paint sticking onto the 
-surface.So, to have a bit of rough finishing on th etube, I sand blasted
- it.</p>
-            <p class="pic"><img src="assets/364.jpg" style="width:80%">
-              <legend>Sanblasting the pipes.</legend>
-              </p><p>The internal surface of the OTA shouldnt refelect light, and therefore painting it black,was essential </p>
-                  <p class="pic"><img src="assets/366.jpg" style="width:80%">
-                    </p><p>The wooden arms and base were painted for an aesthetic appeal.</p>
-                      <p class="pic"><img src="assets/367.jpg" style="width:80%">
-  </p><p>The challenge in using a refelective telescope , is the 
-alignment of the primary and seconadary mirrors.Moreover, as this 
-project has two units of tubes attached by aluminum rods, it would be an
- extra effort in aligning the guide brackets such that the two pieces 
-along with the mirror fall in the same line.</p>
-<p class="pic"><img src="assets/363.jpg" style="width:35%">
-  <legend>Making holes for placing the guide brackets</legend>
-
-</p><p class="pic"><img src="assets/347.jpg" style="width:50%">
-  <legend>Placing the primary mirror</legend>
-  </p><p>The mount for the primary mirror was quite fit inside the 
-tube,bolts would be fixed around the mount, to give an additional 
-support incase it came out of place if at all the assembly is affected 
-by mechanical jerking. </p>
-    <p>The rods were kept in place by assembling the clips 3D printed before.</p>
-      <p class="pic"><img src="assets/371.jpg" style="width:40%">
-          </p><p class="pic"><img src="assets/372.jpg" style="width:35%">
-            <legend>The OTA Assembled!</legend>
-
-<br></p><h2><font color="#84C21B">Errors Made</font></h2><br>
-<p>Well, over the course of this project development, there are a 
-plethora of errors that I have committed, some are rather silly, while 
-other may be due to lack of planning.Some of them are:</p>
-<ul>
-  <li><u>Azimuth axis Belt tension </u>: As I had mentioned above, where
- I used the common tangent formula for finding the distance between the 
-centre of the motor spindle and the central rod.Well, that didnt 
-actually work out exactly, but it was a very close approximate , this 
-may have been caused by:</li>
-  <ul>
-    <li>The formula accounts for a straight line perfectly in line, 
-which I thought would be applicable for a tensioned belt,there could 
-have abeen a small sag, which changed the dimensions</li>
-    <li>Another reason, I suspect is that,the approximations I had done in calculations would have caught up. </li>
-  </ul>
-  <p>The issue was resol;ved by making the gear with a smaller 
-diameter.I changed the number of teeth to 95, which brought the gear 
-ratio to be 4.75. </p>
-  <li><u>Guide Rings Alignment</u> : The guide rings that align the 
-aluminium rods was not aligned properly in the first try.This was caused
- mainly, because I had aligned the guide rings to be parallel the the 
-tube.However, the tuve wasnt cut exactly inline.THis caused the 
-aluminium rods to be at different heights slightly, and therby the 
-primary and secondary mirror to be misaligned. </li>
-  <p>This issue was corrected by aligning the guide rings properly,and reassembling the rods. </p>
-  <li><u>Outer Pass issue</u>: This was a really silly mistake , that I 
-had done. I had given an outer pass cut for the motor hole and the hole 
-for passing the bearing.</li>
-  <p class="pic"><img src="assets/357.jpg" style="width:50%">
-    <legend>The base with a very loose fit holes &amp; pockets</legend>
-  </p><p>I then had to recut the base with inside pass, to get a tight fit of the motors and bearing.</p>
-  <li><u>Rough Castor Wheels:</u>The castor wheels that we had used was 
-of poor quality, hence rotating the base was quite an effort for the 
-motor. I resolved this by using bigger castor with big ping pong balls 
-kind of wheels, also I am planning on making the gear bigger so that 
-there is lesser load on the motor . </li>
-  </ul>
-
-  <br><h2><font color="#84C21B">Bill Of Materials</font></h2><br>
-  <div class="container">
-  <table style="width:100%" border="1">
+<br><h3><font color="#84C21B">Phase V</font></h3><br>
+<p>Here we discuss the tethering,designing of control box and fixing of camera in the
+system the tethering cable used is copper wire which was used to extent the motor wires. Now the wire connections are done in the control box as shown in the figure</p>
+<p>The camera used in the ROV is an endoscopy camera. The camera was chosen
+as it was already waterproofed and can directly be connected to smartphones via
+cable. It provides a smart vision to record video and audio which can be directly
+stored to your Android phone. It is convenient for observation and follow-up
+analysis. It has a light button used to control 6 LED lights to work in dark areas.
+It’s a IP67 waterproof camera with micro to USB line, also works with computer.
+It is an ideal solution for underwater camera.</p>
+<p class="pic"><img src="assets/img/anb.png" style="width:70%">
+<legend>Achieved neutral buoyancy</legend></p>
+<p class="pic"><img src="assets/img/motor_shaft.png" style="width:50%">
+<legend>Exposing the motor shaft</legend></p>
+<p class="pic"><img src="assets/img/r_impeller.png" style="width:50%">
+<legend>Removing the impeller</legend></p>
+<p class="pic"><img src="assets/img/propeller_diagram.png" style="width:100%">
+<legend>Propeller Diagram</legend></p>
+<p class="pic"><img src="assets/img/v_thruster.png" style="width:50%">
+<legend>Vertical Thruster</legend></p>
+<p class="pic"><img src="assets/img/arrow_diagram.png" style="width:70%">
+<legend>Arrow diagram with different motors</legend></p>
+<p class="pic"><img src="assets/img/h_thruster.png" style="width:70%">
+<legend>Horizontal Thrusters</legend></p>
+<p class="pic"><img src="assets/img/p_system.png" style="width:50%">
+<legend>Propulsion System</legend></p>
+<p>
+<table style="width:80%;margin-left:10%" border="1">
       <tbody><tr>
-          <td><b>Item</b></td>
-          <td><b>Price</b></td>
+          <td><b>Direction</b></td>
+          <td><b>M1</b></td>
+          <td><b>M2</b></td>
+          <td><b>M3</b></td>
+          <td><b>M4</b></td>
+          <td><b>M5</b></td>
 
 
       </tr>
 
         <tr>
-            <td>6" Optical Kit</td>
-            <td>Rs 8292</td>
+            <td><b>Forward</b></td>
+            <td>01</td>
+            <td>01</td>
+            <td>01</td>
+            <td>01</td>
+            <td>x</td>
             </tr>
             <tr>
-                <td>Rack and Pinion Focuser</td>
-                <td>Rs 749</td>
+                <td><b>Backward</b></td>
+                <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>x</td>
                 </tr>
 
-          <tr><td>GT2 Pulley</td>
-          <td>Rs 1000 </td>
-          <td></td>
+          <tr>
+          <td><b>Right</b></td>
+          <td>10</td>
+            <td>01</td>
+            <td>01</td>
+            <td>10</td>
+            <td>x</td>
                 </tr>
       <tr>
-          <td>GT2 Belt</td>
-          <td>Rs 440</td>
+          <td><b>Left</b></td>
+          <td>01</td>
+            <td>10</td>
+            <td>10</td>
+            <td>01</td>
+            <td>x</td>
 
         </tr>
       <tr>
-          <td>Ball Bearing</td>
-          <td>Rs 240</td>
+          <td><b>Up</b></td>
+          <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>01</td>
           </tr>
           <tr>
-              <td>Ball Castors</td>
-              <td>Rs 210</td>
+              <td><b>Down</b></td>
+              <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>10</td>
 
               </tr>
-              <tr>
-                  <td>Small Castor Wheels</td>
-                  <td>Rs 180</td>
-                    </tr>
-                    <tr>
-                        <td>Spray Paint</td>
-                        <td>Rs 510 </td>
-                          </tr>
-                          <tr>
-                              <td>200 mm Dia PVC Pipe</td>
-                              <td>Rs 480 </td>
-                                </tr>
-                                <tr>
-                                    <td>3D Print- OTA Clamp</td>
-                                    <td>Rs 3150 </td>
-                                      </tr>
-                                      <tr><td>3D Print- Guide Ring Bottom</td>
-                                      <td>Rs 1000 </td>
-                                        </tr>
-                                        <tr><td>3D Print- Guide Ring Top x2</td>
-                                        <td>Rs 1500 </td>
-                                          </tr>
-                                          <tr><td>3D Print-Primary mirror mount base</td>
-                                          <td>Rs 973  </td>
-                                            </tr>
-                                            <tr><td>3D Print- Primary Mirror adjustable base</td>
-                                            <td>Rs 442 </td>
-                                              </tr>
-                                              <tr><td>3D Print- Laser Holder</td>
-                                              <td>Rs 520 </td>
-                                                </tr>
-                                                <tr><td>3D Print- Secondary mirror- Spider net </td>
-                                                <td>Rs 445 </td>
-                                                  </tr>
-                                                  <tr><td>3D Print- Secondary Mirror Cell</td>
-                                                  <td>Rs 150 </td>
-                                                    </tr>
-                                                    <tr><td>ShopBot CNC Cutting</td>
-                                                    <td>Rs 725 </td>
-                                                      </tr>
-                                                      <tr><td>Laser Cutting - Gears</td>
-                                                      <td>Rs 100 </td>
-                                                        </tr>
-                                                        <tr><td>Laser Cutting -Box Enclosure</td>
-                                                        <td>Rs 250 </td>
-                                                          </tr>
-                                                          <tr><td>Electronics Production- MotorControl/LCD Board</td>
-                                                          <td>Rs 325 </td>
-                                                            </tr>
-                                                            <tr><td>Electronics Production-Master Board</td>
-                                                            <td>Rs 200 </td>
-                                                              </tr>
-                                                              <tr><td><b>Total</b></td>
-                                                              <td>Rs 21881 </td>
-                                                                </tr>
         </tbody></table>
-          </div>
-          <br>
-          <p>The overall cost of building the ZenithScope comes to 21881 rupees, which is approximately equal to 338 USD.</p>
+        <legend>Binary data</legend></p>
 
-          -->
+<br><h3><font color="#84C21B">Phase VI</font></h3><br>
+<p>The section discusses about wiring connection of tether. The wire provided by
+the bilge pumps were marine graded and only have 1.5m. The remaining length was achieved using copper wires which where used for commercial wiring. The
+challenge we faced here was the sealing of joining of two wires in underwater. M-
+seal, super glue all failed and the sealing was at-last achieved using plastic tubescovering the wire bond with epoxy resin sealing both the sides along with shrinking
+tubes.</p>
+<p class="pic"><img src="assets/img/circuit.png" style="width:50%">
+<legend>Circuit for bidirectional motor rotation</legend></p>
+<p class="pic"><img src="assets/img/camera.png" style="width:50%">
+<legend>Endoscopy Camera</legend></p>
+
+<br><h2><font color="#84C21B">Results</font></h2><br>
+<p>
+<table style="width:80%;margin-left:10%" border="1">
+      <tbody>
+        <tr>
+            <td>Operational Depth</td>
+            <td>5m</td>
+            </tr>
+            <tr>
+            <td>Collapse Depth</td>
+            <td>Unknown</td>
+                </tr>
+
+          <tr>
+            <td>Operating Environments</td>
+            <td>Freshwater, Saltwater, Pool, Slow River</td>
+                </tr>
+      <tr>
+            <td>Dimension of Frame</td>
+            <td>30*30 cm</td>
+
+        </tr>
+      <tr>
+            <td>Height of the Frame</td>
+            <td>20cm</td>
+          </tr>
+          <tr>
+            <td>Float Dimension</td>
+            <td>Length:30cm, Diameter:2.5 inch</td>
+
+              </tr>
+        </tbody></table>
+        <legend>Functional Specifications</legend></p>
+        <br>
+<p>After all the phases above mentioned were compiled together for the formation
+of our ROV. Our ROV was tested in a water tank, using the control box. All the
+forward, Backward, Left, Right directions of motions were achieved. The main
+challenge we faced was to push the Rov into the depths and pull the Rov out
+to the water surface. As the vertical motions were controlled by a single motor,
+achieving balance was a challenge. After many trails and fails we have achieved
+balances. Next its the neutral buoyancy which played an important limitation to
+the tests. We came to understand after several trails that the neutral buoyancy
+always changes, as the volume of the water body where changing. Thus weight
+balancing where needed according to the water body we were testing. It’s the
+propeller which made the next challenge. As the propellers were designed by
+ourselves, and due to the lack of quality of 3D printing material change in the
+inner radius of motor shaft were observed after several trails. Here the Dshaft of
+the designed propeller decayed to round shape which made it to slip away from the
+motor shaft during the trails. Later we made the propellers with a better material
+and applied epoxy resin before it’s fixing. Thus the expansion was reduced and
+propeller lasted longer. The endoscopy camera which we were using provided us
+with a good quality of vision more than we expected. But the limitation was
+provided by the length of wire it provided. As these wire were professionally
+installed, we couldn’t extend it.</p>
+
+
+
+
+
+
+
+
+
+
+
 <br><h2><font color="#84C21B">Future Scope</font></h2><br>
 <p>Current system has a control
 system with all components on the land, an alternation include where the motion
@@ -867,7 +607,7 @@ can be included is replacement of relay with motor drivers. In our project we us
 
 
     <!-- Conclusion section  -->
-    <h2><font color="#84C21B">Conclusion</font></h2>
+    <br><h2><font color="#84C21B">Conclusion</font></h2>
         <br>
         <p> I suggest you change this conclusion to something more simple, smaller and understandable</p>
         <p>ROVs are unoccupied, usually highly manoeuvrable, and operated by a crew
@@ -896,7 +636,7 @@ velocity, light penetration, and temperature. Also optical-stereo cameras have b
 mounted on ROVs in order to improve the pilots’ perception of the underwater
 scenario.</p>
 
-<h2><font color="#84C21B">References</font></h2>
+<br><h2><font color="#84C21B">References</font></h2>
 <br>
 <ul>
   <li>Steven W Moore , Harry Bohm and Vickie Jensen,(2010), “Underwater
