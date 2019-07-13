@@ -345,11 +345,76 @@ heavy) and thus it allows ROV to float effortlessly in mid-water. It conserves t
 power that would otherwise be needed to lift the ROV.</p>
 
 <br><h3><font color="#84C21B">Propulsion System</font></h3><br>
-<p class="pic"><img src="assets/img/float.png" style="width:30%">
-<legend>PVC Float</legend></p>
-<p>Floatation is used to balance the sinking tendency of the other parts(which are
-heavy) and thus it allows ROV to float effortlessly in mid-water. It conserves the
-power that would otherwise be needed to lift the ROV.</p>
+<p class="pic"><img src="assets/img/PS.png" style="width:60%">
+<legend>Propulsion System</legend></p>
+<p>The key factors to be considered in any propulsion system are: Number of
+thrusters,Location of thrusters,Thrust (force) produced. The propulsion system
+directly depends on the power supply. All underwater robots use electrical energy.
+Power distribution system is used to channel the energy to various components
+that need it. The thrusters are motorized propellers used to generate the forces
+to propel the vehicle through the water. The proposed frame has a square shape
+in which each of the propellers is placed in the 4 corners and one is placed at the
+centre at the top. The main component of the propulsion system is a motor used
+is bilge pump used along with a propeller.</p>
+<p>In our design we have used the most often applied configuration - 5 thrusters
+propulsion system. It allows us to divide the propulsion system into two indepen-
+dent subsystems responsible for movements in the planes(horizontal and vertical).</p>
+
+<br><h3><font color="#84C21B">Motor - Bilge Pump</font></h3><br>
+<p class="pic"><img src="assets/img/motor.png" style="width:60%">
+<legend>Bilge Pump</legend></p>
+<p>The bilge pumps together with propellers are used for propulsion. A bilge pump
+is a water pump used to remove bilge water from boats. It mainly works in 12v
+battery and it is already waterproofed. It is a non-automatic 1100GPH bilge
+pumps which offer water evacuation activated by a panel. It includes Anti-Airlock
+protection and exclusive moisture tight seals and marine grade wiring. It works in
+Marine water upto 20ft depth. It’s also suitable for pond water pumping, water
+research, solar water system etc.</p>
+
+<br><h3><font color="#84C21B">Power Source</font></h3><br>
+<p>A single motor used in the system uses 5 to 6 amps of current, so current output of
+30 amps is required for proper functioning of the motors. For this purpose we use a
+lithium ion car batteries which provide a peak current of 23ApH. The car batteries
+are affordable. But these cant be used if you need the power source within the
+ROV. </p>
+
+
+
+
+<br><h2><font color="#84C21B">Control Box</font></h2><br>
+<p>The control box helps the observer to control the rov which has been launched
+into underwater. The main components which were used to build the control box
+was:-</p>
+<ul>
+  <li>Microcontroller</li>
+  <li>Relay</li>
+  <li>Joystick</li>
+</ul>
+
+<br><h3><font color="#84C21B">Microcontroller</font></h3><br>
+<p class="pic"><img src="assets/img/Arduino.png" style="width:50%">
+<legend>Arduino UNO</legend></p>
+<p>The microcontroller used is Arduino Uno. It is an open source microcontroller
+board based on the Microchip ATmega328P microcontroller and developed by
+arduino cc. The board is equipped with sets of digital and analog input/output
+pins that may be interfaced to various expansion boards and other circuits. The
+board has 14 Digital pins,6 analog pins , and programmable with the Arduino IDE
+via a USB cable. It accepts voltages between 7 and 20 volts. </p>
+
+<br><h3><font color="#84C21B">Relay</font></h3><br>
+<p class="pic"><img src="assets/img/relay.png" style="width:30%">
+<legend>Relay</legend></p>
+<p>A relay is an electrically operated switch. They use electromagnet to mechanically
+operate a switch. In our control box we use relay for bidirectional control of our
+driving motors, for this we use 5V two channel relay. </p>
+
+<br><h3><font color="#84C21B">Joystick</font></h3><br>
+<p class="pic"><img src="assets/img/joystick.png" style="width:30%">
+<legend>Joystick</legend></p>
+<p>The arduino joystick is similar to two potentiometers connected together , one
+for vertical movement (y axis) and for horizontal movement (x axis). In our project
+we use two joysticks. one for vertical movement along z plane and another one for
+x and y axis movement in horizontal plane. </p>
 
 
 
@@ -361,7 +426,7 @@ power that would otherwise be needed to lift the ROV.</p>
 
 
 
-
+<!--
 
   </p><p>The above piece would be placed right below the mirror with the
  nuts being inserted in the holes on the top staying flush with the 
@@ -450,6 +515,8 @@ in similarly, but the gerar ratio was kept to 1:5, i.e 100 teeth.</p>
       </p><p class="pic"><img src="assets/362.jpg" style="width:35%">
   </p><p class="pic"><img src="assets/laser.gif" style="width:50%">
 
+  -->
+  <!--
   <br></p><h2><font color="#84C21B">Electronics Production</font></h2><br>
   <p>I was involved in the producing a PCB which would house the motor 
 drivers, LCD Display and the trigger switches for homing. This board 
@@ -788,6 +855,8 @@ there is lesser load on the motor . </li>
           </div>
           <br>
           <p>The overall cost of building the ZenithScope comes to 21881 rupees, which is approximately equal to 338 USD.</p>
+
+          -->
 <br><h2><font color="#84C21B">Future Scope</font></h2><br>
 <ul>
   <li>The one feature we couldnt work on was to have the live stream 
@@ -820,11 +889,32 @@ whole weight onto the castors.</li>
     <!-- Conclusion section  -->
     <h2><font color="#84C21B">Conclusion</font></h2>
         <br>
-        <p>The past couple of weeks has been hectic as well as 
-intresting. The project was an exercise that went through almost all of 
-the 19 weeks of Fab Academy, except for the molding and casting week.If 
-time permits,a bit more finishing would render this project as a very 
-good final product.  </p>
+        <p> I suggest you change this conclusion to something more simple, smaller and understandable</p>
+        <p>ROVs are unoccupied, usually highly manoeuvrable, and operated by a crew
+either aboard a vessel/floating platform or on proximate land. They are common
+in deepwater industries such as offshore hydrocarbon extraction. They are linked
+to a host ship by a neutrally buoyant tether or, often when working in rough
+conditions or in deeper water, a load-carrying umbilical cable is used along with a
+tether management system (TMS). The TMS is either a garage-like device which
+contains the ROV during lowering through the splash zone or, on larger work-
+class ROVs, a separate assembly which sits on top of the ROV. The purpose of the
+TMS is to lengthen and shorten the tether so the effect of cable drag where there
+are underwater currents is minimized. The umbilical cable is an armored cable
+that contains a group of electrical conductors and fiber optics that carry electric
+power, video, and data signals between the operator and the TMS. Where used,
+the TMS then relays the signals and power for the ROV down the tether cable.
+Once at the ROV, the electric power is distributed between the components of
+the ROV. However, in high-power applications, most of the electric power drives a
+high-power electric motor which drives a hydraulic pump. The pump is then used
+for propulsion and to power equipment such as torque tools and manipulator arms
+where electric motors would be too difficult to implement subsea. Most ROVs
+are equipped with at least a video camera and lights. Additional equipment is
+commonly added to expand the vehicle’s capabilities. These may include sonar’s,
+magnetometers, a still camera, a manipulator or cutting arm, water samplers, and
+instruments that measure water clarity, water temperature, water density, sound
+velocity, light penetration, and temperature. Also optical-stereo cameras have been
+mounted on ROVs in order to improve the pilots’ perception of the underwater
+scenario.</p>
 
 <h2><font color="#84C21B">References</font></h2>
 <br>
