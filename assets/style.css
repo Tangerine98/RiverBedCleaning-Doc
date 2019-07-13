@@ -1,5 +1,4 @@
 /* Custom CSS */
-
 .license, #cclicense { 
 			font-size: 11px; 
 			text-align: center;
@@ -20,6 +19,8 @@
   margin: 30px auto 30px auto !important;
   display: block;
 }
+
+
 
 .container p img {
   display: block;
@@ -51,7 +52,7 @@ legend {
 .pic {
   margin:3px;
   text-align:center;
-  width:100%;
+  /* width:100vw !important; */
   display: block;
   padding: 4px;
   width: 940px;
@@ -68,6 +69,13 @@ legend {
   margin-right: auto;
   margin-top:20px;
   margin-bottom:20px;
+}
+
+/*To make it compatible for mobile*/
+@media only screen and (max-width: 960px) {
+  .pic {
+    width: 100vw !important;
+  }
 }
 
 #bg {
